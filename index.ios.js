@@ -15,6 +15,7 @@ import AnimateRotation from './src/components/AnimateRotation';
 import AnimateSequence from './src/components/AnimateSequence';
 import AnimateStagger from './src/components/AnimateStagger';
 import AnimateParallel from './src/components/AnimateParallel';
+import FlipCard from './src/components/FlipCard';
 
 
 export default class rnAnimation extends Component {
@@ -28,7 +29,8 @@ export default class rnAnimation extends Component {
       // <AnimateRotation />
       // <AnimateSequence />
       // <AnimateStagger />
-      <AnimateParallel />
+      // <AnimateParallel />
+      <FlipCard />
     );
   }
 }
