@@ -11,6 +11,7 @@ import AnimatedBox from './src/components/AnimatedBox';
 import TouchableBtn from './src/components/TouchableBtn';
 import DraggableCard from './src/components/DraggableCard';
 import AnimateColors from './src/components/AnimateColors';
+import AnimateRotation from './src/components/AnimateRotation';
 
 export default class rnAnimation extends Component {
 
@@ -19,7 +20,8 @@ export default class rnAnimation extends Component {
       // <AnimatedBox />
       // <TouchableBTN />
       // <DraggableCard />
-      <AnimateColors />
+      // <AnimateColors />
+      <AnimateRotation />
     );
   }
 }
