@@ -14,6 +14,7 @@ import AnimateColors from './src/components/AnimateColors';
 import AnimateRotation from './src/components/AnimateRotation';
 import AnimateSequence from './src/components/AnimateSequence';
 import AnimateStagger from './src/components/AnimateStagger';
+import AnimateParallel from './src/components/AnimateParallel';
 
 
 export default class rnAnimation extends Component {
@@ -26,7 +27,8 @@ export default class rnAnimation extends Component {
       // <AnimateColors />
       // <AnimateRotation />
       // <AnimateSequence />
-      <AnimateStagger />
+      // <AnimateStagger />
+      <AnimateParallel />
     );
   }
 }
