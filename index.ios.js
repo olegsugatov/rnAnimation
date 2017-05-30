@@ -13,6 +13,8 @@ import DraggableCard from './src/components/DraggableCard';
 import AnimateColors from './src/components/AnimateColors';
 import AnimateRotation from './src/components/AnimateRotation';
 import AnimateSequence from './src/components/AnimateSequence';
+import AnimateStagger from './src/components/AnimateStagger';
+
 
 export default class rnAnimation extends Component {
 
@@ -23,7 +25,8 @@ export default class rnAnimation extends Component {
       // <DraggableCard />
       // <AnimateColors />
       // <AnimateRotation />
-      <AnimateSequence />
+      // <AnimateSequence />
+      <AnimateStagger />
     );
   }
 }
