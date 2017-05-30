@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  PanResponder,
   Animated,
   AppRegistry,
   StyleSheet,
@@ -10,12 +9,32 @@ import {
 
 export class AnimateColors extends Component {
 
+  componentWillMount() {
+    this.animatedValue = new Animated.Value(0);
+  }
+
+  componentDidMount() {
+  	Animated.timing(this.animatedValue, {
+  		toValue: 150,
+  		duration: 1500
+  	}).start();
+  }
+
   render() {
+  	const interpolateColor = this.animatedValue.interpolate({
+    	inputRange: [0, 150],
+    	outputRange: ['rgb(0,0,0)', 'rgb(51, 250, 170)']
+    })
+    const animatedStyle = {
+    	backgroundColor: interpolateColor,
+    	transform: [
+    	{
+    		translateY: this.animatedValue
+    	}]
+    }
     return (
       <View style={styles.container}>
-      	<Animated.View style={[styles.box, animatedStyle]} {...this.panResponder.panHandlers}>
-      		<Text style={styles.text}>Drag Me</Text>
-      	</Animated.View>
+      	<Animated.View style={[styles.box, animatedStyle]} />
       </View>
     );
   } 
@@ -28,9 +47,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   box: { 
-    width: 100,
-    height: 100,
-    backgroundColor: "#333" 
+    width: 50,
+    height: 50
   },
   text: {
     color: "#fff"

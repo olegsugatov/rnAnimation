@@ -10,6 +10,7 @@ import { Animated, Easing, AppRegistry, StyleSheet, Text, View } from 'react-nat
 import AnimatedBox from './src/components/AnimatedBox';
 import TouchableBtn from './src/components/TouchableBtn';
 import DraggableCard from './src/components/DraggableCard';
+import AnimateColors from './src/components/AnimateColors';
 
 export default class rnAnimation extends Component {
 
@@ -17,7 +18,8 @@ export default class rnAnimation extends Component {
     return (
       // <AnimatedBox />
       // <TouchableBTN />
-      <DraggableCard />
+      // <DraggableCard />
+      <AnimateColors />
     );
   }
 }
